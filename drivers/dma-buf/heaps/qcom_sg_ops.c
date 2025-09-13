@@ -35,7 +35,7 @@
 
 #include "qcom_sg_ops.h"
 
-//add by zhenghaiqing@oplus.com for dma debug
+//add by zhenghaiqing for dma debug
 #define CREATE_TRACE_POINTS
 #include "qcom_dma_trace.h"
 
@@ -564,7 +564,7 @@ void qcom_sg_release(struct dma_buf *dmabuf)
 	msm_dma_buf_freed(buffer);
 #if IS_ENABLED(CONFIG_QCOM_DMABUF_HEAPS_SYSTEM) && IS_ENABLED(CONFIG_OPLUS_FEATURE_MM_OSVELTE)
 	if (is_system_heap_deferred_free(buffer->free)) {
-                //add by zhenghaiqing@oplus.com for dma debug
+                //add by zhenghaiqing for dma debug
                 trace_qcom_dma_free(buffer->len, dmabuf->android_kabi_reserved2, dmabuf->exp_name?:"NULL");
 		if (atomic64_sub_return(buffer->len, &qcom_system_heap_total) < 0) {
 			pr_info("warn: %s, total memory underflow, 0x%lx!!, reset as 0\n",

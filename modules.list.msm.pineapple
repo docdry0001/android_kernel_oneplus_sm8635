@@ -144,5 +144,6 @@ qpnp-power-on.ko
 oplus_bsp_mm_osvelte.ko
 oplus_storage_log.ko
 oplus_uprobe.ko
+oplus_file_record.ko
 oplus_subsys_sleep_monitor.ko
 oplus_power_notifier.ko

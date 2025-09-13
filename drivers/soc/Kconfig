@@ -84,7 +84,10 @@ source "drivers/soc/oplus/device_info/Kconfig"
 source "drivers/soc/oplus/dft/Kconfig"
 #endif /* OPLUS_FEATURE_DFT */
 
+#ifdef OPLUS_UFS_DRIVER
 source "drivers/soc/oplus/storage/Kconfig"
+source "drivers/soc/oplus/storage/common/file_record/Kconfig"
+#endif
 
 #ifdef OPLUS_SUBSYS_SLEEP_MONITOR
 source "drivers/soc/oplus/power/subsys_sleep_monitor/Kconfig"
